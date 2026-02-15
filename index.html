@@ -283,7 +283,28 @@ video {
 @keyframes blinker {
     50% { opacity: 0; }
 }
+/* FULLSCREEN VIDEO CONTAINER FIX */
+.shaka-video-container:fullscreen,
+.shaka-video-container:-webkit-full-screen {
+  width: 100vw !important;
+  height: 100vh !important;
+  background: #000 !important;
+}
 
+.shaka-video-container:fullscreen video,
+.shaka-video-container:-webkit-full-screen video {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+}
+
+/* Mobile fullscreen fix */
+video:fullscreen,
+video:-webkit-full-screen {
+  width: 100vw !important;
+  height: 100vh !important;
+  object-fit: contain !important;
+}
 
 </style>
 
