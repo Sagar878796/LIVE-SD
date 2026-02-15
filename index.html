@@ -335,12 +335,18 @@ video:-webkit-full-screen {
 
 
 <div id="container">
-  <div class="shaka-video-container" data-shaka-player>
-    <video
-  autoplay
-  playsinline
-  preload="metadata"
-  poster="">
+  <div class=".shaka-video-container{
+  position:relative;
+  width:100%;
+  aspect-ratio:16/9; /* Fixed height ki jagah */
+  max-height:70vh;   /* Normal view me max height */
+  background:#000;
+  border:2px solid #000;
+  border-radius:4px;
+  overflow:hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  margin-bottom:10px;
+}
 </video>
     <img id="player-logo" src="" alt="Logo">
     <a href="#" class="stream-btn active" id="showStreamBtn">🔥 Sagar PLAYER 🔥</a>
